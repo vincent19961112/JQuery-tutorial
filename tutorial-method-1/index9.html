@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+
+  div{
+   height: 100px;
+   width: 100px;
+   background-color: red;
+   position: absolute;
+  }
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   // window.onload = function(){
+   //  const oDiv = document.getElementById("div1");
+
+   //  oDiv.onmousedown = function(ev){
+   //   let e = ev || window.event;
+   //   let offsetX = e.pageX - this.offsetLeft;
+   //   let offsetY = e.pageY - this.offsetTop;
+
+   //   document.onmousemove = function(ev){
+   //    let e = ev || window.event;
+   //    oDiv.style.left = e.pageX - offsetX + "px";
+   //    oDiv.style.top = e.pageY - offsetY + "px";
+   //   }
+   //  }
+
+   //  document.onmouseup = function(){
+   //   document.onmousemove = null
+   //  }
+   // }
+
+   $(function(){
+     $("div").mousedown(function(ev){
+      let offsetX = ev.pageX - $(this).offset().left;
+      let offsetY = ev.pageY - $(this).offset().top;
+      var _this = this;
+      $(document).mousemove(function(ev){
+       $(_this).css({
+        left: ev.pageX - offsetX,
+        top: ev.pageY - offsetY
+       })
+      })
+     })
+     $(document).mouseup(function(){
+      $(document).off("mousemove")
+     })
+   })
+  </script>
+ <title>拖移</title>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>

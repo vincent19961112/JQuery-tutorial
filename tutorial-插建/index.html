@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  div{
+   position: absolute;
+   width: 200px;
+   height: 200px;
+   border: 1px solid red;
+   background-color: blue;
+  }
+  em{
+   position: absolute;
+  }
+  p{
+   position: absolute;
+  }
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    $.extend()  拓展工具方法  $.xxx() $.yyy()
+    $fn.extend()  拓展JQ方法  $().xxx() $().yyy()
+
+    JQ插件方法，如果我們想要給JQ新增函數，通過上述兩個插件方法拓展函數庫
+
+   */
+  $.extend({
+   aaa: function(){
+    alert("這是一個工具方法")
+   }
+  })
+  $.fn.extend({
+   aaa: function(){
+    alert("這是一個JQ方法")
+   },
+   drag: function(){
+    $(this).mousedown(function(ev){
+     let offsetX = ev.clientX - $(this).offset().left;
+     let offsetY = ev.clientY - $(this).offset().top;
+
+     let _this = this;
+     $(document).mousemove(function(ev){
+      $(_this).css({
+       left: ev.clientX - offsetX,
+       top: ev.clientY - offsetY
+      })
+     })
+     $(document).mouseup(function(){
+      $(document).off("mousemove")
+     })
+    })
+    return this
+   }
+  })
+  $(function(){
+   // $.aaa()
+   // $("div").aaa()
+   $("div,em,p")
+   .drag()
+   .css("backgroundColor","red")
+   .hover(function(){
+    $(this).css("backgroundColor","yellow")
+   },function(){
+    $(this).css("backgroundColor","red")
+   })
+  })
+  </script>
+ <title>動畫</title>
+</head>
+<body>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <em>em</em>
+ <p>p</p>
+</body>
+</html>

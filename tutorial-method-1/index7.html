@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  div{
+   padding: 50px;
+  }
+  #div1{
+   background-color: red;
+  }
+  #div2{
+   background-color: blue;
+  }
+  #div3{
+   background-color: orange;
+  }
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+   /*
+    
+    -ev pageX 
+      which
+        鼠標事件: button
+        keydown: keyCode 鍵碼
+        keypress: chatCode 字符碼
+
+    -preventDefault stopPropagation
+   */
+
+
+   $(function(){
+    // $("div").click(function(ev){
+    //  alert(this.id)
+    //  alert($(this).attr("id"));
+
+    //  ev.stopPropagation();  //停止事件冒泡
+    // })
+    // $("a").click(function(ev){
+    //  // ev.preventDefault();  停止默認行為
+    //  // ev.stopPropagation();  停止事件冒泡
+     
+    //  // return false  返回JQuery 的false。 既停止默認行為、又停止事件冒泡
+    // })
+
+    // $(document).click(function(ev){
+    //  alert(ev.pageX + ", " + ev.pageY)  //帶滾動距離
+    //  alert(ev.clientX + ", " + ev.clientY)  //可視窗口為原點
+    // })
+
+    //鼠標按下鍵
+    // $(document).mousedown(function(ev){
+    //  alert(ev.which)  //1 左鍵 2 滾輪 3 右鍵
+    // })
+
+    // //鍵盤按下鍵
+    // $(window).keydown(function(ev){
+    //  alert(ev.which)  //返回所有鍵值，大小寫沒有區別
+    // })
+
+    // $(window).keypress(function(ev){
+    //  alert(ev.which)  //不返回功能鍵值，有大小寫的區別
+    // })
+   })
+
+
+  </script>
+ <title>Document</title>
+</head>
+<body style="height: 3000px;">
+ <!-- <div id="div1">
+   <div id="div2">
+     <div id="div3">
+      <a href="http://www.google.com">google</a>
+     </div>
+   </div>
+ </div> -->
+</body>
+</html>

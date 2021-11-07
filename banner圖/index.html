@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  body{
+   margin: 0;
+   padding: 0;
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+  }
+  div{
+   overflow: hidden;
+   height: 300px;
+   width: 500px;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top: 50%;
+   left: 50%;
+  }
+  ol{
+   z-index: 2;
+   cursor: pointer;
+   position: absolute;
+   list-style-type:none;
+   display: flex;
+   flex-direction: row;
+   justify-self: flex-end;
+   align-self: flex-end;
+   bottom: 0;
+   right: 10px;
+  }
+  ul{
+   margin: 0;
+   padding: 0;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+  }
+  .active{
+   background-color: black;
+   color: blanchedalmond;
+  }
+  ol li{
+   font-size: 15px;
+   padding: 10px;
+   font-weight: bold;
+   color: black;
+   background-color: blanchedalmond;
+   border: bisque;
+   margin: 3px;
+   border-radius: 35px;
+  }
+  ul img{
+   height: 300px;
+   width: 500px;
+  }
+ 
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+// Carousel
+   $(function(){
+
+    let currentindex = 0;
+
+    function navLight(){
+     $("ol li").eq(currentindex).attr("class","active").siblings().attr("class","")
+    }
+
+    function Carousel(){
+     if(currentindex == 5){
+     $("ol li").eq(0).attr("class","active").siblings().attr("class","")
+     }
+      $("ul").animate({
+      top: - currentindex * 300
+      },1000,function(){
+       if(currentindex === 6){
+        currentindex = 0;
+        $("ul").css("top", 0)
+       }
+      })
+    }
+
+    $("ol li").click(function(){
+     currentindex = $(this).index();
+     Carousel()
+     navLight()
+    })
+
+    time = setInterval(() => {
+     Carousel()
+     navLight()
+     currentindex++;
+    }, 2000);
+
+    $("#banner").mouseenter(function(){
+     console.log("近來過")
+     clearInterval(time)
+    }).mouseleave(function(){
+      time = setInterval(() => {
+      Carousel()
+      navLight()
+      currentindex++;
+     }, 2000);
+    })
+   })
+  </script>
+ <title>banner圖 輪播</title>
+</head>
+<body> 
+ <div id="banner">
+  <ol>
+   <li class="active">1</li>
+   <li>2</li>
+   <li>3</li>
+   <li>4</li>
+   <li>5</li>
+  </ol>
+  <ul>
+   <img src="swimmer.jpg">
+   <img src="swimmer2.jpg">
+   <img src="swimmer3.jpg">
+   <img src="swimmers2.jpg">
+   <img src="swimmers3.jpg">
+   <img src="swimmer.jpg">
+  </ul>
+ </div>
+  
+</body>
+</html>

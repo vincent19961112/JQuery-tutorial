@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ #div1{
+  width:100px;
+  height:100px;
+  background-color: blue;
+ }
+ #div2{
+  width:200px;
+  height:200px;
+  background-color: red;
+ }
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    clone()      默認只會克隆節點本身，並不會克隆我們元素節點得行為和事件
+    clone(true)  既會克隆節點本身，還會克隆我們元素節點得行為和事件
+   */
+ 
+   $(function(){
+    $("#div1").hover(function(){
+     $(this).css("backgroundColor","orange")
+    },function(){
+     $(this).css("backgroundColor","blue")
+    })
+     $("button").click(function(){
+
+      // let node = $("#div1").clone()
+      // node.appendTo("#div2")
+      let node = $("#div1").clone(true)
+      node.appendTo("#div2")
+     })
+   })
+  </script>
+ <title></title>
+</head>
+<body>
+ <button>克隆節點</button>
+ <div id="div1" title="hello" class="box"></div>
+ <div id="div2"></div>
+</body>
+</html>

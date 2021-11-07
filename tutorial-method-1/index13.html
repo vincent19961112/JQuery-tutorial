@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    add()   可以將多個選擇器拼接在一起
+
+    slice() slice(start,end) 獲取指定範圍內獲取到元素節點 包含開始位置不包含結束位置
+   */
+ 
+   $(function(){
+    // $("div")
+    // .css("backgroundColor","red")
+    // .click(function(){
+    //   alert("點擊")
+    // })
+    // .mouseover(function(){
+    //  $(this).css("backgroundColor","orange")
+    // })
+    // .mouseout(function(){
+    //  $(this).css("backgroundColor","blue")
+    // })
+
+    // $("span")
+    // .css("backgroundColor","red")
+    // .click(function(){
+    //   alert("點擊")
+    // })
+    // .mouseover(function(){
+    //  $(this).css("backgroundColor","orange")
+    // })
+    // .mouseout(function(){
+    //  $(this).css("backgroundColor","blue")
+    // })
+
+    // $("ul li")
+    // .css("backgroundColor","red")
+    // .click(function(){
+    //   alert("點擊")
+    // })
+    // .mouseover(function(){
+    //  $(this).css("backgroundColor","orange")
+    // })
+    // .mouseout(function(){
+    //  $(this).css("backgroundColor","blue")
+    // })
+    // $("div,span,ul li")
+    // .css("backgroundColor","red")
+    // .click(function(){
+    //   alert("點擊")
+    // })
+    // .mouseover(function(){
+    //  $(this).css("backgroundColor","orange")
+    // })
+    // .mouseout(function(){
+    //  $(this).css("backgroundColor","blue")
+    // })
+    // $("div").add("span").add("ul li")
+    // .css("backgroundColor","red")
+    // .click(function(){
+    //   alert("點擊")
+    // })
+    // .mouseover(function(){
+    //  $(this).css("backgroundColor","orange")
+    // })
+    // .mouseout(function(){
+    //  $(this).css("backgroundColor","blue")
+    // })
+    $("ul li").slice(1,4).css("backgroundColor","red")
+
+
+   })
+  </script>
+ <title>add()和slice()</title>
+</head>
+<body>
+ <div>div</div>
+ <span>span</span>
+ <p>p</p>
+ <ul>
+  <li>111</li>
+  <li>111</li>
+  <li>111</li>
+  <li>111</li>
+  <li>111</li>
+ </ul>
+</body>
+</html>

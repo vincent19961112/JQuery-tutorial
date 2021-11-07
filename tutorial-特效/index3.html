@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  #div1{width:100px;height:100px;background-color:red}
+  #div2{width:200px;height:200px;border: 1px solid black;}
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    remove()  刪除元素節點
+     並不會保留這個元素節點上的事件和行為
+    detach()  刪除元素節點
+     會保留這個元素節點上的事件和行為
+   */
+   $(function(){
+    $("#div1").hover(function(){
+     $(this).css("backgroundColor","orange")
+    },function(){
+     $(this).css("backgroundColor","red")
+    })
+    $("button").click(function(){
+
+     let node = $("#div1").detach()
+
+     node.appendTo($("#div2"))
+    })
+
+   })
+  </script>
+ <title>動畫</title>
+</head>
+<body>
+ <div id="div1"></div>
+ <div id="div2"></div>
+ <button>remove</button>
+</body>
+</html>

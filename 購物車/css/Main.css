@@ -1,0 +1,196 @@
+body {
+  background: rgb(186, 186, 186);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 15%,
+    rgba(0, 0, 0, 1) 16%,
+    rgba(255, 255, 255, 1) 17%,
+    rgba(0, 0, 0, 1) 18%,
+    rgba(255, 255, 255, 1) 19%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 1) 94%,
+    rgba(255, 255, 255, 1) 95%,
+    rgba(0, 0, 0, 1) 96%,
+    rgba(0, 0, 0, 1) 97%,
+    rgba(255, 255, 255, 1) 98%,
+    rgba(0, 0, 0, 1) 99%
+  );
+}
+.head {
+  position: relative;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(0, 0, 0, 1) 40%
+  );
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 25px;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.main {
+  position: relative;
+}
+.paycardbtn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+  height: 80px;
+  width: 80px;
+  transition: color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+}
+
+.paycardbtn:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+.paycardbtn-active {
+  position: fixed;
+  top: 50%;
+  right: 300px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  background-color: black;
+  font-size: 20px;
+  font-weight: bold;
+  height: 80px;
+  width: 80px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px;
+  padding: 40px;
+}
+::selection {
+  background: none;
+  color: none;
+}
+
+.carditem {
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 1) 50%
+  );
+  border-radius: 10px;
+  margin: 18px;
+  height: 350px;
+  width: 300px;
+}
+
+.title {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 40px 10px 10px 10px;
+  text-transform: line;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 30px;
+  color: black;
+}
+.description {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  overflow: hidden;
+  height: 160px;
+  padding: 15px;
+}
+.zipcode {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 30px;
+  color: black;
+}
+.paycard {
+  position: absolute;
+  padding: 5px;
+  font-size: 20px;
+  margin: 3px;
+  font-weight: 600;
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 10px;
+  line-height: 40px;
+  height: 40px;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  border: 2px solid black;
+  transition: background-color 1s ease-in-out;
+  transition: line-height 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  transition: bottom 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out;
+}
+
+.paycard:hover {
+  background-color: whitesmoke;
+  bottom: 15px;
+  height: 55px;
+  color: black;
+  font-weight: 800;
+  line-height: 55px;
+  border: 2px solid whitesmoke;
+}

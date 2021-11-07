@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+     parent()   獲取父節點
+     parents()  獲取父節點們
+     closest()  必須傳入參數，參數也是選擇器，只獲取第一個符合條件的元素，從自己開始去找
+   */
+ 
+   $(function(){
+    // $("#div2").parent().css("backgroundColor","red")
+     // $("#div2").parents(".box").css("backgroundColor","red")
+     // $("#div2").closest(".box").css("backgroundColor","red")
+     // $("#div2").closest("#div1").css("backgroundColor","red")
+   })
+  </script>
+ <title>parent和parents和closest</title>
+</head>
+<body>
+<div id="div1" class="box"> 
+ div1
+ <div id="div2" class="box">div2</div>
+</div>
+
+
+</body>
+</html>

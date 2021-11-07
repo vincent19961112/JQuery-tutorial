@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+   JQuery  標籤間的內容  html()  相當於innerHTML
+   JQuery  標籤間純文本  text()  相當於innerText
+   */
+
+   $(function(){
+    // alert($("#div1").html())  // <em>em</em>div 文本<strong>strong</strong>
+    // alert($("#div1").text())  // emdiv 文本strong
+    // $("#div1").html("<h1>hello world</h1>")  //  hello world
+    $("#div1").text("<h1>hello world</h1>")  //  <h1>hello world</h1>
+
+   })
+  </script>
+ <title>load</title>
+</head>
+<body>
+ <div id="div1"><em>em</em>div 文本<strong>strong</strong></div>
+</body>
+</html>

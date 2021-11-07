@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  #div1{width:100px;height:100px;background-color:red}
+  #div2{width:100px;height:100px;background-color:blue}
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+     hover(funcOver, funcOut)
+
+     hide()  隱藏
+      第一個參數: 動畫持續的毫秒數
+      第二個參數: 回掉參數，動畫結束的時候執行的
+     show()  顯示
+     動畫效果是從左上角收起和從左上角展開
+
+     slideDown()  捲簾效果
+     slideUp()
+
+     fadeIn()  淡入淡出
+     fadeOut()
+
+     fadeTo()
+   */
+   $(function(){
+
+    $("#div1").hover(function(){
+    //  hide()
+    //  $("#div2").hide(2000,function(){
+    //   $("#div1").html("移入")
+    //  })
+    //  slideDown()
+    //  $("#div2").slideDown(2000, function(){
+    //   $("#div1").html("移入")
+    //  })
+    //  fadeIn
+     // $("#div2").fadeIn(2000,function(){
+     //  $("#div1").html("移入")
+     // })
+     //  fadeTo()
+     $("#div2").fadeTo(2000,0.5,function(){
+      $("#div1").html("移入")
+     })
+
+    }, function(){
+    //  show()
+    //  $("#div2").show(2000, function(){
+    //   $("#div1").html("移出")
+    //  })
+    //  slideUp()
+    //  $("#div2").slideUp(2000, function(){
+    //   $("#div1").html("移出")
+    //  })
+    //  fadeOut()
+     // $("#div2").fadeOut(2000, function(){
+     //  $("#div1").html("移出")
+     // })
+      $("#div2").fadeTo(2000,0,function(){
+       $("#div1").html("移出")
+      })
+    })
+
+   })
+  </script>
+ <title>動畫</title>
+</head>
+<body>
+ <div id="div1"></div>
+ <div id="div2"></div>
+</body>
+</html>

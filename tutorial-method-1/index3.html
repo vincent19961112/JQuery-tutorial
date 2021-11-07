@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+   /*(兩者的區別在於鏈式操作時，主體是不同的 如($(主體).inserBefore() $(主體).before()))
+    -inserBefore()  before()
+    -insertAfter()   after()
+    -appendTo()     append()  appendChild(類似JS的方法)  插入到子節點的末尾
+    -prependTo()   prepend()                            插入到子節點的首位
+    -remove()
+   */
+
+   $(function(){
+    // $("span").insertBefore($("#div1"))  找到span節點插入到div前面
+    // $("div").insertAfter($("span"))  找到div節點插入到span後面
+    // $("span").appendTo($("div"))  找到span節點，插入到div節點的子節點的末尾
+    // $("span").prependTo($("div"))  找到span節點，插入到div節點的子節點的首位
+    // $("div").remove()  刪除節點
+    // $("div").before($("span"))  找到span節點插入到div的前面
+    // $("div").before($("span")).css("backgroundColor","red"); 主體(div)不同
+    // $("span").insertBefore($("div")).css("backgroundColor","red"); 主體(div)不同
+
+   })
+  </script>
+ <title>Document</title>
+</head>
+<body>
+  <div id="div1"><em>em</em>文本</div>
+  <span>span</span>
+</body>
+</html>

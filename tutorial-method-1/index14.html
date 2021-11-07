@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+     serialize()  將我們表單中的數據拼湊成querystring (查詢字符串) name1=value&name2=value2
+     search       ?name1=value&name2=value2
+     querystring  name1=value&name2=value2
+
+     serializeArray()  將表單拼接成數組
+   */
+ 
+   $(function(){
+    // alert($("input").serialize())   //a=1&b=2&c=3
+    // console.log($("input").serializeArray())  //[{name:"a",value:"1"},{name:"b",value:"2"},{name:"c",value:"3"}]
+   })
+  </script>
+ <title>serialize()和serializeArray()</title>
+</head>
+<body>
+  <input type="text" name="a" value="1">
+  <input type="text" name="b" value="2">
+  <input type="text" name="c" value="3">
+</body>
+</html>

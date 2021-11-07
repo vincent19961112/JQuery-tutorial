@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+     JQ的工具方法和我們自己封裝的js方法沒有任何區別
+      $()以下是常用方法(都沒用了，ECMA5和ECMA6類似功能的函數)
+
+      JQ的方法調用: $().xxx() $().yyy()  必須對象調用這個函數
+      JQ的工具方法 $.xxx() $.yyy()
+
+        -type()  輸出當前輸出數據類型  typeof
+        -trim()
+        -inArray()      indexOf()
+        -proxy()  功能類似於bind()
+        -noConflict()  給$取別名
+        -$.parseJSON()  JSON.parse()
+        -makeArray()   將違數組轉成數組  Array.from()
+   */
+ 
+   // $(function(){
+     // let arr = [1,2,3]
+     // let str = new String()
+     // let d = new Date()
+     // alert(typeof arr)  //object
+     // alert(typeof str)  //object
+     // alert(typeof d)    //object
+     // alert($.type(arr)) //array
+     // alert($.type(str)) //string
+     // alert($.type(d))   //date
+
+     // let str = "    hel  lo    ";
+     // alert("|" + str + "|")
+     // alert("|" + str.trim() + "|")   //js
+     // alert("|" + $.trim(str) + "|")  //JQ
+
+     // let arr = [10,20,30,40]
+     // alert(arr.indexOf(30))    //js
+     // alert($.inArray(30,arr))  //JQ
+
+     // var qian = $.noConflict()
+     // var $ = 10;
+     //   alert(1)
+     // qian(function(){
+     //  qian(document).click(function(){
+     //   alert(1)
+     //  })
+     // })
+   // })
+
+   window.onload = function(){
+    let nodes = document.getElementsByTagName("div")
+    // nodes.push("hello")  違數組
+    // nodes = $.makeArray(nodes);  //違數組轉數組
+    // nodes = Array.from(nodes);  //違數組轉數組
+    nodes.push("hello")
+    alert(nodes)
+   }
+  </script>
+ <title></title>
+</head>
+<body>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+</body>
+</html>

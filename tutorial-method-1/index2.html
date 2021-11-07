@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  #div1{width: 100px; height: 100px; background-color: red;border: 5px solid red; padding: 20px; margin: 20px;}
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+   /*
+     addClass() 新增class樣式
+     removeClass() 移除class樣式
+
+     // offsetWidth  width + border + padding
+
+     width()  innerWidth()  outerWidth()
+     height() innerHeight() outerHeight()
+   */
+   $(function(){
+     // $("#div1").addClass("box3 box4 box2")
+     // $("#div1").removeClass("box3 box4 box5")
+
+     // alert($("#div1").css("width"))  //"100px" 字符串
+     // alert($("#div1").width());  //100 數字
+     // alert($("#div1").innerWidth());  //width + padding
+     // alert($("#div1").outerWidth());  //width + border + padding
+     // alert($("#div1").outerWidth(true));  //width + border + padding + margin
+
+   })
+  </script>
+ <title>Document</title>
+</head>
+<body>
+ <div id="div1" class="box1 box2"></div>
+
+
+
+</body>
+</html>

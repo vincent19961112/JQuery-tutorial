@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    -trigger()  主動觸發
+    -ev.data
+    ev.target(兼容後觸發對象)
+    ev.type(輸出事件類型)
+   */
+ 
+   $(function(){
+    // $("button").click(function(ev){
+    //  alert(ev.type)
+    //  alert(ev.target)
+    // })
+    // $("button").on("click",{username:"鋼鐵俠", age: 18},function(ev){
+    //  alert(ev.data);
+    //  alert(ev.data.username)
+    //  alert(ev.data.age)
+    // })
+
+    // $("button").trigger("click");
+
+    $("#play").on("play",function(){
+     alert("開始撥放音樂")
+    })
+    $("#play").on("next",function(){
+     alert("切換到下一首歌曲")
+    })
+    $("button").eq(0).click(function(){
+     $("#play").trigger("play")
+    })
+    $("button").eq(1).click(function(){
+     $("#play").trigger("next")
+    })
+   })
+  </script>
+ <title>trigger()</title>
+</head>
+<body>
+ <button>播放</button>
+ <button>下一首</button>
+ <div id="play"></div>
+</body>
+</html>

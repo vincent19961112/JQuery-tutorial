@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   $(function(){
+    // alert($("input").val())  //JQ只能取第一個符合條件元素的值
+    // $("input").val("hello world")  //JQ賦值批量操作，會對所有獲取到的元素進行賦值
+    /*
+     css()
+     attr()
+     html()
+     *都是批量操作
+    */
+    // alert($("input").size());
+    // alert($("input").length)
+
+    $("input").each(function(index,item){
+     // alert(item + ', ' + index)
+     item.value = index;
+     // $(item).val(index);
+    })
+   })
+  </script>
+ <title>拖移</title>
+</head>
+<body>
+ <input type="text" value="aaa">
+ <input type="text" value="bbb">
+ <input type="text" value="ccc">
+</body>
+</html>

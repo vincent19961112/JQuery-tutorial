@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>文字轉換</title>
+</head>
+<body>
+ 
+ <script>
+  (function(){
+   // 字符串駝峰命名
+   // let value = "get-element-by-id";
+   // function toUpString(str){
+   //  console.log(str)
+   //  let arr = str.split('-')
+   //  console.log(arr)
+   //  for(var i = 1;i < arr.length; i++){ arr[i].charAt(0).toUpperCase().substr(1 ,arr[i].length)}
+   //  return arr.join('')
+   // }
+   // console.log(toUpString(value))
+   //  事件冒泡
+   // let arr = [54,4,32,92,1];
+
+   // for(let i = 0; i < arr.length - 1; i++){
+   //  for(let j = 0; j < arr.length - i; j++){
+   //   if(arr[j]>arr[j+1]){
+   //    let c = arr[j+1]
+   //    arr[j+1] = arr[j]
+   //    arr[j] = c
+   //   }
+   //  }
+   // }
+   // console.log(arr)
+   //  數組反轉
+   // let arr = [88445,12451,1254,548,7,6,5,4,3,2,1]
+   // for(let i = 0; i < arr.length/2; i++){
+   // let c = arr[i]
+   // let index = arr.length - i - 1;
+   // arr[i] = arr[index]
+   // arr[index] = c
+   // }
+   // console.log(arr)
+   //  去除數組想同值
+   // let arr = [8,8,20,20,1,0,0,12,0,20]
+   // let t = []
+   // t[0] = arr[0]
+   // for(let i = 0; i < arr.length; i++){
+   //  for(let j = 0; j < t.length; j++ ){
+   //    if(t[j] == arr[i]){
+   //     break;
+   //    }
+   //    if(j == t.length - 1){
+   //     t.push(arr[i])
+   //    }
+   //   }
+   // }
+   // console.log(t)
+   let arr = [8,8,20,20,1,0,0,12,0,20]
+   let t = []
+   t[0] = arr[0]
+   for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < t.length; j++){
+     if(t[j] == arr[i]){
+      break;
+     }
+     if(j == t.length - 1){
+      t.push(arr[i])
+     }
+    }
+   }
+   console.log(t)
+  })()
+ </script>
+</body>
+</html>

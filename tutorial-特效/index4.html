@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    ready  事件
+    $(document).ready()  事件觸發在當前的document加載完成以後執行
+
+    window
+
+    document加載完畢肯定是在window加載完畢之前
+   */
+   window.onload = function(){
+    alert("我是 load")
+   }
+   $(function(){
+    alert(1);
+   })
+   $(document).ready(function(){
+    alert(2);
+   })
+  </script>
+ <title>load</title>
+</head>
+<body>
+</body>
+</html>

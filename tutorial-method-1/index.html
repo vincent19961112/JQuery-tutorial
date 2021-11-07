@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+   /*
+    filter 過濾 對已經獲取的網頁進行過濾
+    not filter的反義詞
+    has 直接判定子節點
+
+    prev 查詢當前兄弟節點中的上一個節點
+    next 查詢當前兄弟節點中的下一個節點
+    
+    find 查詢子節點
+
+    index 獲取當前節點在兄弟節點中的位置
+    eq 位置獲取指定的元素節點
+
+    attr 設置和修改行間屬性
+   */
+   $(function(){
+    // $("div").filter(".box").css("backgroundColor","red")
+    // $("div").not(".box").css("backgroundColor","red")
+    // $("div").has(".box").css("backgroundColor","orange")
+    // $("h3").prev().css("backgroundColor","red")
+    // $("em").next().css("backgroundColor","blue")
+    // $("ol").find('li').css("backgroundColor","blue")
+    // alert($("h3").index())
+    // $("li").eq(3).css("backgroundColor","blue")
+    // $("li:eq(4)").css("backgroundColor","red")
+    // alert($("#div1").attr("id")) 取id值
+    // alert($("#div1").attr("title")) 取title值
+    // alert($("#div1").attr("class")) 取class值
+    // $("#div1").attr("title", "world") 改title值 hello 成world
+    // $("#div1").attr("class", "box") 改class值 book 成box
+
+   })
+  </script>
+ <title>Document</title>
+</head>
+<body>
+  <!-- <div class="box">div1</div>
+  <div>div2 <strong class="box"></strong></div> -->
+
+  <!-- <h2>h1</h2>
+  <p>p</p>
+  <h3>h3</h3>
+  <em>em</em>
+  <div>div</div> -->
+
+  <!-- <ul>
+   <li></li>
+   <li></li>
+   <li></li>
+  </ul>
+  <ol>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol> -->
+
+  <!-- <strong>strong</strong>
+  <em>em</em>
+  <div id="div1">
+   <h2>h1</h2>
+   <p>p</p>
+   <h3>h3</h3>
+   <em>em</em>
+   <div>div</div>
+  </div> -->
+
+  <div id="div1" title="hello" class="book"></div>
+
+</body>
+</html>

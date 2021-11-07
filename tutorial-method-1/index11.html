@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    wrap()       每一個或取道的節點單獨包裝
+    wrapAll()    整體包裝
+    wrapInner()  內部包裝
+    unwrap()     刪除包裝 不會刪除body
+   */
+ 
+   $(function(){
+    //我們給葉面上所有的span節點加一個包裝，即接JQ創建節點的代碼
+     // $("span").wrap("<p class='box' title='hello world'></p>");
+     // $("span").wrapAll("<p class='box' title='hello world'></p>")
+     // $("span").wrapInner("<p class='box' title='hello world'></p>")
+     $("span").unwrap()
+   })
+  </script>
+ <title></title>
+</head>
+<body>
+  <div>
+   <span>span</span>
+  </div>
+  <span>span</span>
+  <span>span</span>
+  <span>span</span>
+</body>
+</html>

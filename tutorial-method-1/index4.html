@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  #div1{
+   height: 50px;
+   width: 50px;
+   background-color: red
+  }
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+   /*
+    $().click(function(){
+
+    })
+
+    on和off方法
+   */
+
+  //  給一個事件添加一個函數
+   // $(function(){
+   //   $("#div1").on("click", function(){
+   //     alert("hello")
+   //   })
+   // })
+
+   //  給不同事件添加一個函數
+   // $(function(){
+   //  var i = 0;
+   //   $("#div1").on("click mouseover mouseout", function(){
+   //    $(this).html(i++)
+   //   })
+   // })
+
+   //  給不同事件添加不同的函數
+   // $(function(){
+   //  $("#div1").on({
+   //   click: function(){
+   //    $(this).css("backgroundColor","orange")
+   //   },
+   //   mouseover: function(){
+   //    $(this).css("backgroundColor","blue")
+   //   },
+   //   mouseout: function(){
+   //    $(this).css("backgroundColor","red")
+   //   }
+   //  })
+   // })
+
+   //  第二個參數是觸發對象的選擇器
+    // $(function(){
+    //  $("ul").on("click", ".box", function(){
+    //   $(this).css("backgroundColor","red")
+    //  })
+
+    //  var i = 6;
+    //  $("#btn1").click(function(){
+    //   //  新增li節點
+    //   $(`<li>${i++ * 1111}</li>`).appendTo($("ul"));
+    //  })
+
+    // })
+
+    // $(function(){
+    //  $("#div1").on({
+    //   click: function(){
+    //    $("#div1").css("backgroundColor","orange")
+    //   },
+    //   mouseover: function(){
+    //    $("#div1").css("backgroundColor","red")
+    //   },
+    //   mouseout: function(){
+    //    $("#div1").css("backgroundColor","blue")
+    //   }
+    //  })
+
+    //  $("#div1").click(show)
+    //  function show(){
+    //   alert("你好")
+    //  }
+
+    //  $("#cancel").click(function(){
+    //   // $("#div1").off()  取消所有事件的所有函數
+    //   // $("#div1").off("click")  只取消click事件的函數
+    //   // $("#div1").off("click", show)  取消某一個事件下指定的函數
+    //  })
+    // })
+
+
+  </script>
+ <title>Document</title>
+</head>
+<body>
+  <div id="div1"></div>
+
+  <ul>
+   <li class="box">1111</li>
+   <li>2222</li>
+   <li class="box">3333</li>
+   <li>4444</li>
+   <li>5555</li>
+  </ul>
+  <button id="btn1">add li</button>
+  <button id="cancel">cancel</button>
+</body>
+</html>

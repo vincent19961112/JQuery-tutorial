@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+  #div1 button{
+   width:100px; 
+   height: 30px; 
+   background-color:gray; 
+   font-size:16px; 
+   color:white;
+  }
+  #div1 div{
+   width: 350px;
+   height: 350px; 
+   background-color: grey; 
+   border: 1px solid black;
+  }
+  #div1 .active{
+   background-color: orange; 
+   color: blue
+   }
+ </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+   // window.onload = function(){
+   //  var oDiv = document.getElementById("div1");
+   //  var aBtns = oDiv.getElementsByTagName("button");
+   //  var aDivs = oDiv.getElementsByTagName("div");
+
+   //  通過循環添加點擊事件
+   //  for(var i = 0; i < aBtns.length; i++){
+     
+   //   aBtns[i].index = i;
+   //   aBtns[i].onclick = function(){
+   //    for(var j = 0; j < aBtns.length; j++){
+   //     aBtns[j].className = '';
+   //     aDivs[j].style.display = 'none';
+   //    }
+
+   //    this.className = 'active';
+   //    aDivs[this.index].style.display = 'block';
+   //   }
+   //  }
+   // }
+
+   $(function(){
+    var aBtns = $("#div1").find("button");
+    var aDivs = $("#div1").find("div");
+
+    aBtns.click(function(){
+     aBtns.attr("class", "");
+     aDivs.css("display", "none");
+
+     $(this).attr("class", "active");
+     aDivs.eq($(this).index()).css("display", "block")
+    })
+   })
+  </script>
+ <title>Document</title>
+</head>
+<body>
+ <div id="div1"> 
+  <button class="active">HTML5</button>
+  <button>javaScript</button>
+  <button>JQuery</button>
+  <div style="display: block;">HTML5是HTML最新的修訂版本，由全球資訊網協會（W3C）於2014年10月完成標準制定。 目標是取代1999年所制定的HTML 4.01和XHTML 1.0標準，以期能在網際網路應用迅速發展的時候，使網路標準達到符合當代的網路需求。</div>
+  <div style="display: none;">透過DOM API （上面提到的）動態調整HTML 與CSS 進行改變網頁呈現，在JavaScript 是很常見的使用方式。要注意的是，檔案中的程式碼通常會以出現在頁面上的</div>
+  <div style="display: none;">2020年10月3日 — 使用jQuery最大的好處就是選擇器(selector)。 除了一些新潮的架構設計與套件完全使用Javascript來長出網頁內容外，大部分使用時機是改變HTML</div>
+ </div>
+
+</body>
+</html>

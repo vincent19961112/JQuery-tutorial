@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script>
+  $(function(){
+   // alert('相當於window.onload')
+   $("h1").click(function(){
+    alert('我被點擊了')
+   })
+   $("h1").mouseover(function(){
+    this.style.backgroundColor = "red"
+   })
+   $("h1").mouseout(function(){
+    this.style.backgroundColor = "blue"
+   })
+  })
+ </script>
+</head>
+<body>
+  <h1>hello world</h1>
+</body>
+<!-- <script>
+ alert('hello')
+</script> -->
+</html>

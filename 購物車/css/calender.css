@@ -1,0 +1,153 @@
+#calenderTitle {
+  margin-top: 50px;
+  top: 30px;
+  left: -30px;
+  position: absolute;
+  font-size: 50px;
+  transform: rotate(-45deg);
+  padding: 10px 50px 10px 50px;
+  background-color: black;
+  color: whitesmoke;
+}
+#calendercity {
+  min-height: 154px;
+  padding: 30px 50px 30px 50px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#calender {
+  position: relative;
+  padding: 50px;
+  margin-top: 50px;
+  min-height: 500px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.addDay {
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  font-size: 25px;
+  color: whitesmoke;
+  background-color: black;
+  padding: 8px;
+  font-weight: bold;
+}
+.day {
+  position: relative;
+  margin: 10px;
+  min-height: 80px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.dayTitle {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%) rotate(-10deg);
+  font-size: 100px;
+}
+.calenderCard {
+  z-index: 2;
+  cursor: pointer;
+  flex-direction: row;
+  margin: 50px;
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  font-size: 10px;
+  line-height: 50px;
+  color: whitesmoke;
+  text-align: center;
+  border-radius: 100%;
+  outline-color: whitesmoke;
+  overflow: hidden;
+  border-radius: 100%;
+  border-width: thin;
+  border: 2px dashed;
+}
+
+#calenderBackCity {
+  cursor: pointer;
+  color: whitesmoke;
+  margin-top: 30px;
+  height: 30px;
+  width: 150px;
+  padding: 20px;
+  background: black;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.calendarTime {
+  z-index: 2;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 10px;
+}
+.PlanDetail {
+  visibility: hidden;
+  z-index: 2;
+  background: whitesmoke;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.PlanTitle {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 15px;
+}
+.PlanContent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 15px;
+}
+.PlanTime {
+  position: absolute;
+  z-index: 2;
+  font-size: 80px;
+  transform: translate(10px, 40px) rotate3d(4, 3, 4, 30deg);
+  backdrop-filter: hue-rotate(30deg);
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 90%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  top: 10px;
+  left: 10px;
+  color: black;
+}
+.PlanClose {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 30px;
+  border: 5px solid black;
+  border-radius: 100%;
+  color: whitesmoke;
+  background: black;
+}

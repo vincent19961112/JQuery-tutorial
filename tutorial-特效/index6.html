@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script>
+   /*
+    節點操作的方法
+     下述所有的方法的參數都是選擇器
+    siblings()  用來除當前節點外，所有的兄弟節點，不包括外部節點
+    nextAll()  prevAll()
+    parentsUntil()  nextUntil()  prevUntil()
+   */
+
+   $(function(){
+    // $("#p1").siblings("h2").css("backgroundColor","red")
+    // $("#p1").nextAll().css("backgroundColor","red") p1 節點上的所有節點
+    // $("#p1").prevAll().css("backgroundColor","red") p1 節點下的所有節點
+    // $("#p1").nextUntil("strong").css("backgroundColor","orange") p1 節點到strong節點的所有節點
+    // $("#p1").prevUntil("h1").css("backgroundColor","red") p1 節點到h1節點的所有節點
+    // $("#p1").parentsUntil("html").css("backgroundColor","red") html 節點到body背景顏色
+    // $("#p1").parentsUntil("body").css("backgroundColor","red") body 節點到div1背景顏色
+   })
+  </script>
+ <title>load</title>
+</head>
+<body>
+ <div id="div1">
+  <h1>h1</h1>
+  <h2>h2</h2>
+  <p id="p1">p</p>
+  <em>em</em>
+  <h3>h3</h3>
+  <strong>strong</strong>
+  <h6>h6</h6>
+  <h2>h2</h2>
+ </div>
+ <h1>h1</h1>
+ <div>div</div>
+</body>
+</html> 
